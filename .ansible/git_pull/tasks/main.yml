@@ -3,4 +3,4 @@
     repo: "git@github.com:Sniqur/node-aws.git"
     dest: "{{ APP_PATH }}"
     single_branch: yes
-    version: main
+    version: master
