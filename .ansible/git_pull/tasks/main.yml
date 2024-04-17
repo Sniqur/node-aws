@@ -2,5 +2,7 @@
   git:
     repo: "git@github.com:Sniqur/node-aws.git"
     dest: "{{ APP_PATH }}"
+    accept_hostkey: yes
     single_branch: yes
     version: master
+
