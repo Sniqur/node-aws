@@ -1,7 +1,7 @@
 name: Deploy node.js to AWS2 ubuntu
 on:
   push:
-    branches: [main]
+    branches: [master]
 
 
 jobs:
