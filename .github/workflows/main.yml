@@ -1,0 +1,27 @@
+name: Deploy node.js to AWS2 ubuntu
+on:
+  push:
+    branches: [main]
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        name: Checkout
+      - name: Run playbook
+        uses: dawidd6/action-ansible-playbook@v2
+        with:
+          # Required, playbook filepath
+          playbook: .ansible/main.yml
+          # Optional, directory where playbooks live
+          key: ${{secret.SSH_PTIVATE_KEY}}
+          inventory: |
+            [all]
+            ${{secrets.AWS}} address=localhost
+          options: | 
+            -e NODE_ENV=${{vars.NODE_ENV}}
+            -e GITHUB_REPO=${{github.repository}}
+            -e APP_PORT=${{vars.APP_PORT}}
+            -e APP_PATH=${{vars.APP_PATH}}
