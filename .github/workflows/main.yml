@@ -2,7 +2,7 @@ name: Deploy node.js to AWS2 ubuntu
 on:
   push:
     branches: [master]
-#
+
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
           # Required, playbook filepath
           playbook: .ansible/main.yml
           # Optional, directory where playbooks live
-          key: ${{secrets.SSH_PTIVATE_KEY}}
+          key: ${{secrets.SSH_PRIVATE_KEY}}
           inventory: |
             [all]
             ${{secrets.AWS}} address=localhost
