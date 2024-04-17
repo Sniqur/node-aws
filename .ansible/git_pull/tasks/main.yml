@@ -1,6 +1,6 @@
 - name: pull app changes
   git:
-    repo: "git@github.com:{{ GITHUB_REPO }}.git"
+    repo: "git@github.com:Sniqur/node-aws.git"
     dest: "{{ APP_PATH }}"
     single_branch: yes
     version: main
