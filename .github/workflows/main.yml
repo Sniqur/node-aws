@@ -16,7 +16,7 @@ jobs:
           # Required, playbook filepath
           playbook: .ansible/main.yml
           # Optional, directory where playbooks live
-          key: ${{secret.SSH_PTIVATE_KEY}}
+          key: ${{secrets.SSH_PTIVATE_KEY}}
           inventory: |
             [all]
             ${{secrets.AWS}} address=localhost
