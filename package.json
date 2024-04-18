@@ -4,8 +4,8 @@
   "description": "Node.js app on AWS EC2",
   "main": "index.js",
   "scripts": {
-    "start": "node //wsl$/Ubuntu/home/stephan/dev/main/aws/app/index.js",
-    "dev": "nodemon //wsl$/Ubuntu/home/stephan/dev/main/aws/app/index.js"
+    "start": "node /home/stephan/dev/main/aws/app/index.js",
+    "dev": "nodemon /home/stephan/dev/main/aws/app/index.js"
   },
   "repository": {
     "type": "git",
