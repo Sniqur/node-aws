@@ -5,8 +5,8 @@ WORKDIR /aws
 
 COPY package.json /aws
 COPY app /aws/app
-
-RUN npm install
+RUN apt-get update && apt-get install -y nodejs npm
+RUN npm install --omit=dev
 
 EXPOSE 3000/tcp
 
