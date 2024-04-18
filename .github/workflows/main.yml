@@ -20,8 +20,8 @@ jobs:
           inventory: |
             [all]
             ${{secrets.AWS}} address=localhost
-          options: | 
-            -e NODE_ENV=${{vars.NODE_ENV}}
+          options: |
             -e GITHUB_REPO=${{github.repository}}
+            -e NODE_ENV=${{vars.NODE_ENV}}
             -e APP_PORT=${{vars.APP_PORT}}
             -e APP_PATH=${{vars.APP_PATH}}

@@ -1,14 +1,1 @@
-*
-!package.json
-!app
-!app/**/*.js
-!.github
-!.github/workflows
-!.github/workflows/main.yml
-!.docker
-!.docker/Dockerfile
-!.ansible
-!.ansible/git_pull
-!.ansible/docker_restart
-!.ansible/**/tasks
-!.ansible/**/*.yml
+node_modules
